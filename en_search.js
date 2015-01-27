@@ -33,7 +33,7 @@ function queryToItem(app, queries) {
     var tags = searchTags(app, query_last.substr(1));
     items = tags.map(function(tag) { return tagToItem(tag, query_sub); });
   }
-  else if (queries.length > 0) {
+  else if (query_last.length > 0) {
     var notes = searchNotes(app, queries);
     items = notes.map(noteToItem);
   }
